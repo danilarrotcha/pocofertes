@@ -47,7 +47,7 @@ namespace WebServer.Controllers
                 return BadRequest(ModelState);
             }
 
-            if (id != offer.Id)
+            if (id != offer.OfferID)
             {
                 return BadRequest();
             }
@@ -90,7 +90,7 @@ namespace WebServer.Controllers
             }
             catch (DbUpdateException)
             {
-                if (OfferExists(offer.Id))
+                if (OfferExists(offer.OfferID))
                 {
                     return Conflict();
                 }
@@ -100,7 +100,7 @@ namespace WebServer.Controllers
                 }
             }
 
-            return CreatedAtRoute("DefaultApi", new { id = offer.Id }, offer);
+            return CreatedAtRoute("DefaultApi", new { id = offer.OfferID }, offer);
         }
 
         // DELETE api/Offers/5
@@ -130,7 +130,7 @@ namespace WebServer.Controllers
 
         private bool OfferExists(int id)
         {
-            return db.Offers.Count(e => e.Id == id) > 0;
+            return db.Offers.Count(e => e.OfferID == id) > 0;
         }
     }
 }

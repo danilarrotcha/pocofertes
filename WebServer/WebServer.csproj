@@ -162,21 +162,21 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Offers.DAL\Offers.DAL.csproj">
+    <ProjectReference Include="..\Offers.DAL\Offers.DAL.csproj">
       <Project>{d3a8d9f8-3d38-441d-94de-0e95352aeb37}</Project>
       <Name>Offers.DAL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Offers.Entity\Offers.Entity.csproj">
+    <ProjectReference Include="..\Offers.Entity\Offers.Entity.csproj">
       <Project>{aeeb83fb-f2c7-4237-896a-e3d45fd39e17}</Project>
       <Name>Offers.Entity</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Repository\Repository.csproj">
-      <Project>{6e682a14-c872-4813-b620-76e108dea683}</Project>
-      <Name>Repository</Name>
     </ProjectReference>
     <ProjectReference Include="..\Offers.Service\Offers.Service.csproj">
       <Project>{06e1e43e-cfdd-4c50-8afb-ccaac8d7abb0}</Project>
       <Name>Offers.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Repository\Repository.csproj">
+      <Project>{6e682a14-c872-4813-b620-76e108dea683}</Project>
+      <Name>Repository</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
