@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using WebServer.App_Start;
 
 namespace WebServer
 {
@@ -14,11 +15,15 @@ namespace WebServer
             // Web API routes
             config.MapHttpAttributeRoutes();
 
+            config.Formatters.XmlFormatter.UseXmlSerializer = true;
+
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            ODataConfig.Register(config);
         }
     }
 }

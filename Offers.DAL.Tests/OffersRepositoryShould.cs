@@ -234,6 +234,7 @@ namespace Offers.DAL.Tests
         {
             return string.Format("{0} {1}", customer.Name, customer.SurName);
         }
+
         public static string GetFullName(this Manager manager)
         {
             return string.Format("{0} {1}", manager.Name, manager.SurName);
