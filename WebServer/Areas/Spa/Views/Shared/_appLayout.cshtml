@@ -1,0 +1,13 @@
+﻿@using System.Web.Optimization
+@using WebServer.App_Start
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div style="margin-top: 20px" ng-app>
+    @RenderBody()
+</div>
+
+@section scripts{
+    @Scripts.Render(BundleConstants.Scripts.AngularJs)
+    @Scripts.Render(BundleConstants.Scripts.AngularJsUiBootstrap)
+}
