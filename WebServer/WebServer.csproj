@@ -472,7 +472,9 @@
     <Compile Include="App_Start\UnityMvcActivator.cs" />
     <Compile Include="App_Start\UnityWebApiActivator.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\Offers\Controllers\api\OffersController.cs" />
     <Compile Include="Areas\Offers\Controllers\AppController.cs" />
+    <Compile Include="Areas\Offers\Controllers\odata\OffersQueryController.cs" />
     <Compile Include="Areas\Offers\OffersAreaRegistration.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
