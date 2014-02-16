@@ -1,13 +1,14 @@
 ﻿@using System.Web.Optimization
 @using WebServer.App_Start
-@using WebServer.Areas.Spa
+@using WebServer.Areas.Offers
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - </title>
+    <title>@ViewBag.Title</title>
     @Styles.Render(BundleConstants.Styles.GeneralCss)
+    @Scripts.Render(BundleConstants.Scripts.Main)
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -25,7 +26,7 @@
                         </li>
                         
                         <li>
-                             @Html.ActionLink("Spa", "Index", "App", new {Area = "Spa"}, new {})
+                             @Html.ActionLink("Offers aplication", "Main", "App", new {Area = "Offers"}, new {})
                         </li>
                     </ul>
                 </div>
@@ -33,16 +34,14 @@
         </div>
     </div>
 
-    <div class="container">
+    <div class="container" style="margin-top: 70px">
         @RenderBody()
         <hr />
         <footer>
             <p>&copy; @DateTime.Now.Year - Offers Prove of Concept</p>
         </footer>
-    </div>
-
-    @Scripts.Render(BundleConstants.Scripts.Jquery)
-    @Scripts.Render(BundleConstants.Scripts.TwitterUiBootstrap)
+    </div> 
+    
     @RenderSection("scripts", required: false)
 </body>
 </html>

@@ -4,11 +4,7 @@
     {
         public class Scripts
         {
-            public const string Jquery = "~/bundles/jquery";
-            public const string AngularJs = "~/bundles/angular";
-            public const string AngularJsUiBootstrap = "~/bundles/angular_ui_bootstrap";
-            public const string TwitterUiBootstrap = "~/bundles/twitter_bootstrap";
-            public const string App = "~/bundles/app";
+            public const string Main = "~/bundles/twitter_bootstrap";
         }
 
         public class Styles

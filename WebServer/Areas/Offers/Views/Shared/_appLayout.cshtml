@@ -1,0 +1,59 @@
+﻿@using System.Web.Optimization
+@using WebServer.App_Start
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "POC Offers";
+}
+
+   @RenderBody()
+
+@section scripts{
+    
+    <script>
+        debugger;
+        require.config({
+            baseUrl: 'Scripts',
+            paths: {
+                'angular': 'angular/angular',
+                'angular-route': 'angular/angular-route',
+                'jquery': 'jquery/jquery',
+                'domReady': 'domReady/domReady',
+                'app': 'app/app'
+            },
+            shim: {
+                angular: {
+                    deps: ['jquery'],
+                    exports: 'angular'
+                },
+                'angular-route': ['angular']
+            }
+        });
+
+        require(['angular',
+                'app',
+                'domReady',
+                'angular-route'],
+            function (angular, app, domReady) {
+                
+                'use strict';
+                
+                    app
+                    .config(['$routeProvider',
+                        function ($routeProvider) {
+                            
+                            $routeProvider
+                                .when(
+                                    '/',
+                                    {
+                                        templateUrl: '@Url.Action("Index", "App", new {Area = "Offers"})'
+                                    }
+                                );
+                        }
+                    ]);
+                
+                domReady(function () {
+                    angular.bootstrap(document, ['myApp']);
+                });
+            });
+</script>
+}

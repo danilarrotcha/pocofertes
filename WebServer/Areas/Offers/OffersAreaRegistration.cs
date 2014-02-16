@@ -1,14 +1,14 @@
 ﻿using System.Web.Mvc;
 
-namespace WebServer.Areas.Spa
+namespace WebServer.Areas.Offers
 {
-    public class SpaAreaRegistration : AreaRegistration 
+    public class OffersAreaRegistration : AreaRegistration 
     {
         public override string AreaName 
         {
             get 
             {
-                return "Spa";
+                return "Offers";
             }
         }
 
@@ -16,8 +16,8 @@ namespace WebServer.Areas.Spa
         {
             context.MapRoute(
                 "Spa_default",
-                "Spa/{controller}/{action}/{id}",
-                new { action = "Index", id = UrlParameter.Optional }
+                "Areas/Offers/{action}/{id}",
+                new { controller = "App", id = UrlParameter.Optional }
             );
         }
     }
