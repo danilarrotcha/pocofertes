@@ -19,7 +19,10 @@ namespace WebServer.Controllers
          * http://localhost:52282/odata/OffersQuery?$filter=CustomerID%20eq%2030
          * http://localhost:52282/odata/OffersQuery?$filter=CustomerID%20eq%2036
          * http://localhost:52282/odata/OffersQuery?$filter=PriceAmount%20gt%201500&$top=10
+         * http://localhost:52282/odata/OffersQuery?$filter=PriceAmount%20lt%201000or%20PriceAmount%20eq%202100
          * 
+         * oData conventions:
+         * http://www.odata.org/documentation/odata-v2-documentation/uri-conventions/
          * The current support of query string parameters is limited to $top, $skip, $filter and $orderby.
          */
 

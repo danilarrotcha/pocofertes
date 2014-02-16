@@ -146,7 +146,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Areas\Offers\Views\templates\index.html" />
     <Content Include="Content\css\bootstrap-responsive.css" />
     <Content Include="Content\css\bootstrap-responsive.min.css" />
     <Content Include="Content\css\bootstrap.css" />
@@ -472,9 +471,9 @@
     <Compile Include="App_Start\UnityMvcActivator.cs" />
     <Compile Include="App_Start\UnityWebApiActivator.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Areas\Offers\Controllers\api\OffersController.cs" />
+    <Compile Include="Controllers\api\OffersController.cs" />
     <Compile Include="Areas\Offers\Controllers\AppController.cs" />
-    <Compile Include="Areas\Offers\Controllers\odata\OffersQueryController.cs" />
+    <Compile Include="Controllers\odata\OffersQueryController.cs" />
     <Compile Include="Areas\Offers\OffersAreaRegistration.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
