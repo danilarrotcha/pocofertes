@@ -10,9 +10,9 @@ namespace WebServer.App_Start
         {
             bundles.Add(
             new ScriptBundle(BundleConstants.Scripts.Main).Include(
-                      "~/Scripts/jquery/jquery-1.10.2.js",
-                      "~/Scripts/twitter/bootstrap.js",
-                      "~/Scripts/require/require.js"));
+                      "~/Scripts/jquery/jquery.js",
+                      "~/Scripts/twitter/bootstrap.js"));
+            bundles.Add(new ScriptBundle(BundleConstants.Scripts.RequireJs).Include("~/Areas/Offers/libs/require.js"));
             
             bundles.Add(new StyleBundle(BundleConstants.Styles.GeneralCss).Include(
                       "~/Content/css/bootstrap.css",

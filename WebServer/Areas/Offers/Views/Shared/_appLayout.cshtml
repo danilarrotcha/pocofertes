@@ -7,17 +7,14 @@
 
    @RenderBody()
 
+@Scripts.Render(BundleConstants.Scripts.RequireJs)
 @section scripts{
     
     <script>
         require.config({
-            baseUrl: 'Scripts',
+            baseUrl: 'libs/',
             paths: {
-                'angular': 'angular/angular',
-                'angular-route': 'angular/angular-route',
-                'jquery': 'jquery/jquery',
-                'domReady': 'domReady/domReady',
-                'app': 'app/app'
+                'app': '../Scripts/app'
             },
             shim: {
                 angular: {
@@ -29,7 +26,7 @@
         });
 
         require(['angular',
-                'app',
+                'app/app',
                 'domReady',
                 'angular-route'],
             function (angular, app, domReady) {

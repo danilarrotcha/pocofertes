@@ -1,4 +1,5 @@
 ﻿define(['angular', 'angular-route'],
-function (angular) {
+function (angular, a) {
+    debugger;
     return angular.module('myApp', ['ngRoute']);
 });

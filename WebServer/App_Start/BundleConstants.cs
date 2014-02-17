@@ -5,6 +5,7 @@
         public class Scripts
         {
             public const string Main = "~/bundles/twitter_bootstrap";
+            public static string RequireJs = "~/bundles/requirejs";
         }
 
         public class Styles
