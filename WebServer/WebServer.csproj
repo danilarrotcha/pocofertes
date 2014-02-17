@@ -425,6 +425,8 @@
     <Content Include="Areas\Offers\libs\jquery.js" />
     <Content Include="Areas\Offers\libs\jquery.validate.js" />
     <Content Include="Areas\Offers\libs\jquery.validate.unobtrusive.js" />
+    <Content Include="Areas\Offers\Scripts\app\controllers\helloWorldController.js" />
+    <Content Include="Areas\Offers\Scripts\app\services\dependencyResolver.js" />
     <Content Include="Content\css\bootstrap-responsive.css" />
     <Content Include="Content\css\bootstrap-responsive.min.css" />
     <Content Include="Content\css\bootstrap.css" />
@@ -435,6 +437,7 @@
     <Content Include="Areas\Offers\Scripts\app\app.js" />
     <Content Include="Areas\Offers\libs\domReady.js" />
     <Content Include="Areas\Offers\Views\App\Index.cshtml" />
+    <Content Include="Areas\Offers\Views\App\HelloWorld.cshtml" />
     <None Include="Scripts\jquery\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery\jquery.js" />
     <Content Include="Scripts\jquery\jquery-1.10.2.min.js" />

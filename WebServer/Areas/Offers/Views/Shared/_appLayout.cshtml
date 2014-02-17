@@ -8,6 +8,14 @@
    @RenderBody()
 
 @Scripts.Render(BundleConstants.Scripts.RequireJs)
+
+<!--
+    
+    TODO: Use define from requirejs to build up a configuration file for the routes and give it a name.
+    Then, it will be possible to pass the dependency to the bootstrap script bellow.
+
+    -->
+
 @section scripts{
     
     <script>
@@ -28,22 +36,32 @@
         require(['angular',
                 'app/app',
                 'domReady',
+                'app/services/dependencyResolver',
                 'angular-route'],
-            function (angular, app, domReady) {
+            function (angular, app, domReady, dependencyResolver) {
                 
                 'use strict';
                 
                     app
-                    .config(['$routeProvider',
-                        function ($routeProvider) {
+                    .config([
+                        '$routeProvider',
+                        '$controllerProvider',
+                        function ($routeProvider, $controllerProvider) {
+
+                            app.controller = $controllerProvider.register;
                             
                             $routeProvider
                                 .when(
                                     '/',
                                     {
                                         templateUrl: '@Url.Action("Index", "App", new {Area = "Offers"})'
-                                    }
-                                );
+                                    })
+                                .when(
+                                    '/helloWorld',
+                                    {
+                                        templateUrl: '@Url.Action("HelloWorld", "App")',
+                                        resolve: dependencyResolver(['app/controllers/helloWorldController'])
+                                    });
                         }
                     ]);
                 

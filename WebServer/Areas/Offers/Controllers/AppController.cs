@@ -19,5 +19,10 @@ namespace WebServer.Areas.Offers.Controllers
         {
             return View();
         }
+
+        public ActionResult HelloWorld()
+        {
+            return View();
+        }
 	}
 }
