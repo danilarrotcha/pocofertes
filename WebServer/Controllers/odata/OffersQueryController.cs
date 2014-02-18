@@ -162,6 +162,27 @@ namespace WebServer.Controllers
             return SingleResult.Create(_offersRepository.Query().Get().Where(m => m.OfferID == key).Select(m => m.Manager));
         }
 
+        // GET odata/OffersQuery(5)/OfferReason
+        [Queryable]
+        public SingleResult<OfferReason> GetOfferReason([FromODataUri] int key)
+        {
+            return SingleResult.Create(_offersRepository.Query().Get().Where(m => m.OfferID == key).Select(m => m.OfferReason));
+        }
+
+        // GET odata/OffersQuery(5)/OfferStatu
+        [Queryable]
+        public SingleResult<OfferStatu> GetOfferStatu([FromODataUri] int key)
+        {
+            return SingleResult.Create(_offersRepository.Query().Get().Where(m => m.OfferID == key).Select(m => m.OfferStatu));
+        }
+
+        // GET odata/OffersQuery(5)/OfferType
+        [Queryable]
+        public SingleResult<OfferType> GetOfferType([FromODataUri] int key)
+        {
+            return SingleResult.Create(_offersRepository.Query().Get().Where(m => m.OfferID == key).Select(m => m.OfferType));
+        }
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)

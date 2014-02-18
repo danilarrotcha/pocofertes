@@ -55,6 +55,9 @@ namespace WebServer.App_Start
             entitySetConfiguration.EntityType.Ignore(t => t.ManagerID);
             modelBuilder.EntitySet<Customer>("Customer");
             modelBuilder.EntitySet<Manager>("Manager");
+            modelBuilder.EntitySet<OfferReason>("OfferReason");
+            modelBuilder.EntitySet<OfferStatu>("OfferStatu");
+            modelBuilder.EntitySet<OfferType>("OfferType");
 
             return modelBuilder.GetEdmModel();
         }
