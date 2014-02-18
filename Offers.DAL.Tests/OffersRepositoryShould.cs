@@ -16,17 +16,11 @@ namespace Offers.DAL.Tests
         private readonly IRepository<Offer> offersRepository; 
         public OffersRepositoryShould()
         {
-            //using (var context = new OffersContext())
-            //{
-            //    System.Data.Entity.Database.SetInitializer(new OffersContextInitializer());
-            //    var customerNames = (from o in context.Customers
-            //                      select new {Name = o.Name});
-            //    Console.WriteLine(customerNames.First());
-            //}
             var contexta = new OffersContext();
-            
             offersRepository = new UnitOfWork(contexta).Repository<Offer>();
         }
+
+        
 
         [Fact]
         public void ReturnAllOffers()

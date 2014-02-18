@@ -1,17 +1,14 @@
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
-using Offers.Entities;
-using Offers.DAL.Mapping;
-using Repository.Providers.EntityFramework;
+using Offers.Data.Initializer.Models.Mapping;
 
-
-namespace Offers.DAL
+namespace Offers.Data.Initializer.Models
 {
-    public partial class OffersContext : DataContext
+    public partial class OffersContext : DbContext
     {
         static OffersContext()
         {
-            Database.SetInitializer<OffersContext>(null);
+            Database.SetInitializer<OffersContext>(new OffersContextInitializer());
         }
 
         public OffersContext()

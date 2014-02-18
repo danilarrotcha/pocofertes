@@ -1,13 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Offers.Entities;
+﻿
 
-namespace Offers.DAL
+namespace Offers.Data.Initializer
 {
+    using Offers.Data.Initializer.Models;
+    using System;
+    using System.Collections.Generic;
+    using System.Data.Entity;
+    using System.Linq;
+
+    /// <summary>
+    /// Use this class to initialize the database.
+    /// This is currently a hard copy of the Offers.DAL and Offers.Entities copy
+    /// due to an issue with the Repository framework which does NOT allow
+    /// to seed the data into the database.
+    /// For this POC will fit fair enought
+    /// 
+    /// MAKE SURE:
+    /// You have set the connection string properly to your database.
+    /// 
+    /// TESTED ON:
+    /// SQL Express 2012.
+    /// 
+    /// How to use:
+    /// Run the test found on the OffersDbInitializer.cs within this project, at root level.
+    /// </summary>
     public class OffersContextInitializer : DropCreateDatabaseAlways<OffersContext>
     {
         protected override void Seed(OffersContext context)
@@ -103,7 +119,7 @@ namespace Offers.DAL
             descriptionsDictionay.Add(2, "Campaña inicial y potencial cliente con otros servicios");
             descriptionsDictionay.Add(3, "Realizar oferta a la baja para capturar cliente con muchas opciones de venta");
             descriptionsDictionay.Add(4, "Oferta generado por contacto relacionado");
-            /*
+            
             var offerIndex = 0;
             customers
                 .Select(c => c.CustomerID)
@@ -159,7 +175,7 @@ namespace Offers.DAL
                         CustomerID = id,
                         ManagerID = GetRandom(minMaxManagers.Key, minMaxManagers.Value)
                     });
-                });*/
+                });
             context.SaveChanges();
         }
 

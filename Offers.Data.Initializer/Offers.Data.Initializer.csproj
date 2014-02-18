@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D3A8D9F8-3D38-441D-94DE-0E95352AEB37}</ProjectGuid>
+    <ProjectGuid>{ABE16EEB-9053-475C-AB09-74791130A667}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Offers.DAL</RootNamespace>
-    <AssemblyName>Offers.DAL</AssemblyName>
+    <RootNamespace>Offers.Data.Initializer</RootNamespace>
+    <AssemblyName>Offers.Data.Initializer</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,10 +31,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework">
-      <HintPath>..\WebServer\packages\EntityFramework.6.0.2\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.0-beta1\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\WebServer\packages\EntityFramework.6.0.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.0-beta1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -44,38 +44,48 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="xunit">
+      <HintPath>..\packages\xunit.1.9.2\lib\net20\xunit.dll</HintPath>
+    </Reference>
+    <Reference Include="xunit.extensions">
+      <HintPath>..\packages\xunit.extensions.1.9.2\lib\net20\xunit.extensions.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Enums\OffersEnums.cs" />
-    <Compile Include="Mapping\CustomerMap.cs" />
-    <Compile Include="Mapping\ManagerMap.cs" />
-    <Compile Include="Mapping\MSreplication_optionsMap.cs" />
-    <Compile Include="Mapping\OfferMap.cs" />
-    <Compile Include="Mapping\OfferNoteMap.cs" />
-    <Compile Include="Mapping\OfferReasonMap.cs" />
-    <Compile Include="Mapping\OfferStatuMap.cs" />
-    <Compile Include="Mapping\OfferTypeMap.cs" />
-    <Compile Include="Mapping\spt_fallback_dbMap.cs" />
-    <Compile Include="Mapping\spt_fallback_devMap.cs" />
-    <Compile Include="Mapping\spt_fallback_usgMap.cs" />
-    <Compile Include="Mapping\spt_monitorMap.cs" />
-    <Compile Include="Mapping\spt_valuesMap.cs" />
-    <Compile Include="OffersContext.cs" />
+    <Compile Include="OffersDbInitializer.cs" />
+    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Manager.cs" />
+    <Compile Include="Models\Mapping\CustomerMap.cs" />
+    <Compile Include="Models\Mapping\ManagerMap.cs" />
+    <Compile Include="Models\Mapping\MSreplication_optionsMap.cs" />
+    <Compile Include="Models\Mapping\OfferMap.cs" />
+    <Compile Include="Models\Mapping\OfferNoteMap.cs" />
+    <Compile Include="Models\Mapping\OfferReasonMap.cs" />
+    <Compile Include="Models\Mapping\OfferStatuMap.cs" />
+    <Compile Include="Models\Mapping\OfferTypeMap.cs" />
+    <Compile Include="Models\Mapping\spt_fallback_dbMap.cs" />
+    <Compile Include="Models\Mapping\spt_fallback_devMap.cs" />
+    <Compile Include="Models\Mapping\spt_fallback_usgMap.cs" />
+    <Compile Include="Models\Mapping\spt_monitorMap.cs" />
+    <Compile Include="Models\Mapping\spt_valuesMap.cs" />
+    <Compile Include="Models\OffersContext.cs" />
+    <Compile Include="Models\MSreplication_options.cs" />
+    <Compile Include="Models\Offer.cs" />
+    <Compile Include="Models\OfferNote.cs" />
+    <Compile Include="Models\OfferReason.cs" />
+    <Compile Include="Models\OfferStatu.cs" />
+    <Compile Include="Models\OfferType.cs" />
+    <Compile Include="Models\spt_fallback_db.cs" />
+    <Compile Include="Models\spt_fallback_dev.cs" />
+    <Compile Include="Models\spt_fallback_usg.cs" />
+    <Compile Include="Models\spt_monitor.cs" />
+    <Compile Include="Models\spt_values.cs" />
+    <Compile Include="OffersContextInitializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Offers.Entity\Offers.Entity.csproj">
-      <Project>{aeeb83fb-f2c7-4237-896a-e3d45fd39e17}</Project>
-      <Name>Offers.Entity</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Repository\Repository.csproj">
-      <Project>{6e682a14-c872-4813-b620-76e108dea683}</Project>
-      <Name>Repository</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

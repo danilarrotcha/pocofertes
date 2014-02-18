@@ -17,7 +17,7 @@ namespace WebServer.Controllers
         /* odata querying samples:
          * http://localhost:52282/odata/OffersQuery?$orderby=PriceAmount%20desc
          * http://localhost:52282/odata/OffersQuery?$filter=CustomerID%20eq%2030
-         * http://localhost:52282/odata/OffersQuery?$filter=CustomerID%20eq%2036
+         * http://localhost:52282/odata/OffersQuery?$filter=CustomerID%20eq%2035
          * http://localhost:52282/odata/OffersQuery?$filter=PriceAmount%20gt%201500&$top=10
          * http://localhost:52282/odata/OffersQuery?$filter=PriceAmount%20lt%201000or%20PriceAmount%20eq%202100
          * 
