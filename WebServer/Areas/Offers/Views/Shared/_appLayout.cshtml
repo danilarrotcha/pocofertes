@@ -5,7 +5,12 @@
     ViewBag.Title = "POC Offers";
 }
 
-   @RenderBody()
+@section customeStyles
+{
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Areas/Offers/Content/offers.css")" />
+}
+
+@RenderBody()
 
 @Scripts.Render(BundleConstants.Scripts.RequireJs)
 

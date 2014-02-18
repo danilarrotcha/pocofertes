@@ -9,6 +9,7 @@
     <title>@ViewBag.Title</title>
     @Styles.Render(BundleConstants.Styles.GeneralCss)
     @Scripts.Render(BundleConstants.Scripts.Main)
+    @RenderSection("customeStyles", false)
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">

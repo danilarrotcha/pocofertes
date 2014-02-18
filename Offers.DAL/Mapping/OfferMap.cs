@@ -33,6 +33,15 @@ namespace Offers.DAL.Mapping
             this.HasRequired(t => t.Manager)
                 .WithMany(t => t.Offers)
                 .HasForeignKey(d => d.ManagerID);
+            this.HasRequired(t => t.OfferReason)
+                .WithMany(t => t.Offers)
+                .HasForeignKey(d => d.ReasonID);
+            this.HasRequired(t => t.OfferStatu)
+                .WithMany(t => t.Offers)
+                .HasForeignKey(d => d.OfferStatusID);
+            this.HasRequired(t => t.OfferType)
+                .WithMany(t => t.Offers)
+                .HasForeignKey(d => d.OfferTypeID);
 
         }
     }

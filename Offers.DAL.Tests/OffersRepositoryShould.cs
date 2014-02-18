@@ -16,7 +16,16 @@ namespace Offers.DAL.Tests
         private readonly IRepository<Offer> offersRepository; 
         public OffersRepositoryShould()
         {
-            offersRepository = new UnitOfWork(new OffersContext()).Repository<Offer>();
+            //using (var context = new OffersContext())
+            //{
+            //    System.Data.Entity.Database.SetInitializer(new OffersContextInitializer());
+            //    var customerNames = (from o in context.Customers
+            //                      select new {Name = o.Name});
+            //    Console.WriteLine(customerNames.First());
+            //}
+            var contexta = new OffersContext();
+            
+            offersRepository = new UnitOfWork(contexta).Repository<Offer>();
         }
 
         [Fact]
@@ -28,7 +37,8 @@ namespace Offers.DAL.Tests
                 .Result;
 
             Assert.NotNull(result);
-            Assert.True(result.Any());
+            var first = result.First();
+            Assert.True(first != null);
         }
 
         [Fact]

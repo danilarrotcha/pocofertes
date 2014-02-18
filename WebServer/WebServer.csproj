@@ -146,6 +146,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Areas\Offers\Content\Images\carousel\AdminOffice.jpg" />
+    <Content Include="Areas\Offers\Content\Images\carousel\clean-white-office-fotolia_14951071.jpg" />
+    <Content Include="Areas\Offers\Content\Images\carousel\header.jpg" />
+    <Content Include="Areas\Offers\Content\Images\carousel\office-interior-excellence.jpg" />
+    <Content Include="Areas\Offers\Content\offers.css" />
     <Content Include="Areas\Offers\libs\angular-animate.min.js.map" />
     <Content Include="Areas\Offers\libs\angular-cookies.min.js.map" />
     <Content Include="Areas\Offers\libs\angular-loader.min.js.map" />
@@ -468,6 +473,7 @@
     <Compile Include="App_Start\UnityMvcActivator.cs" />
     <Compile Include="App_Start\UnityWebApiActivator.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\Offers\Constants\OffersConstants.cs" />
     <Compile Include="Controllers\api\OffersController.cs" />
     <Compile Include="Areas\Offers\Controllers\AppController.cs" />
     <Compile Include="Controllers\odata\OffersQueryController.cs" />

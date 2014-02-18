@@ -61,6 +61,7 @@
     <Compile Include="Mapping\spt_monitorMap.cs" />
     <Compile Include="Mapping\spt_valuesMap.cs" />
     <Compile Include="OffersContext.cs" />
+    <Compile Include="OffersContextInitializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

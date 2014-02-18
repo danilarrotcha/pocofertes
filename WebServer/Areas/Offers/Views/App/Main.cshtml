@@ -1,7 +1,60 @@
-﻿@{
+﻿@using WebServer.Areas.Offers.Constants
+@{
     ViewBag.Title = "Sample 1";
 }
-
-<h2>This is my shell page</h2>
-<div ng-view>
+<div class="navbar">
+    <div class="navbar-inner">
+        <ul class="nav">
+            <li><a href='#/'><i class="icon-home"></i> Spa home</a></li>
+            <li><a href='#/helloWorld'>Hello world sample</a></li>
+        </ul>
+    </div>
 </div>
+<!-- carousel -->
+@if (OffersConstants.EnableCarousel)
+{
+    <div id="myCarousel" class="carousel slide">
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="@Url.Content("~/Areas/Offers/Content/Images/carousel/AdminOffice.jpg")" alt="">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>Example headline.</h1>
+                        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                        <a class="btn btn-large btn-primary" href="#">Sign up today</a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="@Url.Content("~/Areas/Offers/Content/Images/carousel/header.jpg")" alt="">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>Another example headline.</h1>
+                        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                        <a class="btn btn-large btn-primary" href="#">Learn more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="@Url.Content("~/Areas/Offers/Content/Images/carousel/office-interior-excellence.jpg")" alt="">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>One more for good measure.</h1>
+                        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                        <a class="btn btn-large btn-primary" href="#">Browse gallery</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+    </div>
+    <!-- /.carousel -->
+}
+
+<hr />
+<div class="container" ng-view>
+    
+</div>
+
+
