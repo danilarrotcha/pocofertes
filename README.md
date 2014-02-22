@@ -6,6 +6,15 @@ This is a project that will try to show how to work together within an:
 * Entity framework 6
 * Angular JS.
 
+The background story:
+Provide a full corporate web application, lets say, for a company that offers many services such as:
+- Payroll processing
+- Client office management services
+- etc..
+All in one, can be accomplish building a corp web application that could contain SPA's isolated.
+In this early example, will contain an Area for Offers. Offers will be a SPA build on top of angularJS.
+This SPA will try to still use the MVC server part to easily manage authorization and visibility at server side. So templates for angular js will become first ASP.Net views. The data providers will be in fact the Wep API Controllers, both api and odata controllers.
+
 # Table of Contents
  
 * [Frameworks used](#frameworks-used)
