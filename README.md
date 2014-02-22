@@ -30,6 +30,9 @@ http://ify.io/lazy-loading-in-angularjs/
 * Twitter bootstrap
 * Angular UI bootstrap and NgGrid:
 http://angular-ui.github.io/
+* ASP.NET MVC 5:
+http://www.asp.net/vnext/overview/aspnet-mvc
+* Web API via nuget
 * xUnit:
 http://xunit.codeplex.com/
 * Entity framework 6:
@@ -56,6 +59,7 @@ This poc's main objective is to try to use the following features:
 * Seed the database, with the help of the **Offers.Data.Initializer** project in this source. Make sure you set the proper connection string at the **app.config** file found in the same project.
    Run the test **'OffersDbInitializer'**.
 * You will then be ready to launch the web application.
+* If you like to run karma and see how fun tests go, just open the command line and locate your self into the project Offers area and run karma command: *karma start*
 
 # <a name="other"></a> Other points of interests:
 If you would like to see the angular SPA go to Offers Area.
