@@ -11,6 +11,7 @@ Provide a full corporate web application, lets say, for a company that offers ma
 - Payroll processing
 - Client office management services
 - etc..
+
 All in one, can be accomplish building a corp web application that could contain SPA's isolated.
 In this early example, will contain an Area for Offers. Offers will be a SPA build on top of angularJS.
 This SPA will try to still use the MVC server part to easily manage authorization and visibility at server side. So templates for angular js will become first ASP.Net views. The data providers will be in fact the Wep API Controllers, both api and odata controllers.
