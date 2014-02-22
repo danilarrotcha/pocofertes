@@ -433,6 +433,7 @@
     <Content Include="Areas\Offers\libs\jquery.validate.unobtrusive.js" />
     <Content Include="Areas\Offers\Scripts\controllers\helloWorldController.js" />
     <Content Include="Areas\Offers\Scripts\services\dependencyResolver.js" />
+    <Content Include="Areas\Offers\tests\jasmine_template.html" />
     <Content Include="Areas\Offers\tests\specs\controllersSpec.js" />
     <Content Include="Areas\Offers\tests\specs\testFitures.js" />
     <Content Include="Areas\Offers\tests\test-main.js" />
