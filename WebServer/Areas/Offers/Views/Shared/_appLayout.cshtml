@@ -12,7 +12,7 @@
 
 @RenderBody()
 
-@Scripts.Render(BundleConstants.Scripts.RequireJs)
+@Scripts.Render(BundleConstants.Scripts.RequireJsAndAngularJs)
 
 <!--
     
@@ -27,23 +27,23 @@
         require.config({
             baseUrl: 'libs/',
             paths: {
-                'app': '../Scripts/app'
-            },
+                'app': '../Scripts'
+            }/*,
             shim: {
                 angular: {
                     deps: ['jquery'],
                     exports: 'angular'
                 },
                 'angular-route': ['angular']
-            }
+            }*/
         });
 
-        require(['angular',
+        require([
                 'app/app',
                 'domReady',
                 'app/services/dependencyResolver',
                 'angular-route'],
-            function (angular, app, domReady, dependencyResolver) {
+            function (app, domReady, dependencyResolver) {
                 
                 'use strict';
                 

@@ -5,7 +5,7 @@
 *   http://ify.io/lazy-loading-in-angularjs/
 */
 
-define(['angular'], function () {
+define([], function () {
     return function(dependencies) {
         var definition =
         {

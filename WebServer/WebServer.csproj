@@ -151,6 +151,7 @@
     <Content Include="Areas\Offers\Content\Images\carousel\header.jpg" />
     <Content Include="Areas\Offers\Content\Images\carousel\office-interior-excellence.jpg" />
     <Content Include="Areas\Offers\Content\offers.css" />
+    <Content Include="Areas\Offers\karma.conf.js" />
     <Content Include="Areas\Offers\libs\angular-animate.min.js.map" />
     <Content Include="Areas\Offers\libs\angular-cookies.min.js.map" />
     <Content Include="Areas\Offers\libs\angular-loader.min.js.map" />
@@ -430,8 +431,11 @@
     <Content Include="Areas\Offers\libs\jquery.js" />
     <Content Include="Areas\Offers\libs\jquery.validate.js" />
     <Content Include="Areas\Offers\libs\jquery.validate.unobtrusive.js" />
-    <Content Include="Areas\Offers\Scripts\app\controllers\helloWorldController.js" />
-    <Content Include="Areas\Offers\Scripts\app\services\dependencyResolver.js" />
+    <Content Include="Areas\Offers\Scripts\controllers\helloWorldController.js" />
+    <Content Include="Areas\Offers\Scripts\services\dependencyResolver.js" />
+    <Content Include="Areas\Offers\tests\specs\controllersSpec.js" />
+    <Content Include="Areas\Offers\tests\specs\testFitures.js" />
+    <Content Include="Areas\Offers\tests\test-main.js" />
     <Content Include="Content\css\bootstrap-responsive.css" />
     <Content Include="Content\css\bootstrap-responsive.min.css" />
     <Content Include="Content\css\bootstrap.css" />
@@ -439,7 +443,7 @@
     <Content Include="Content\css\site.css" />
     <Content Include="Content\img\glyphicons-halflings-white.png" />
     <Content Include="Content\img\glyphicons-halflings.png" />
-    <Content Include="Areas\Offers\Scripts\app\app.js" />
+    <Content Include="Areas\Offers\Scripts\app.js" />
     <Content Include="Areas\Offers\libs\domReady.js" />
     <Content Include="Areas\Offers\Views\App\Index.cshtml" />
     <Content Include="Areas\Offers\Views\App\HelloWorld.cshtml" />
