@@ -26,27 +26,22 @@ This SPA will try to still use the MVC server part to easily manage authorizatio
 # <a name="frameworks-used"></a>Frameworks used for the cause
 * Generic Repository and UoW framework:
 This is used to simplify the BL and DAL layers. This framework provides the UoW and generic repository pattern in play.
-You can find more information concerning it at:
-
- http://blog.longle.net/2013/05/11/genericizing-the-unit-of-work-pattern-repository-pattern-with-entity-framework-in-mvc/
- and at: http://genericunitofworkandrepositories.codeplex.com/releases/view/113204
+You can find more information concerning it at [Long Le's Blog](http://blog.longle.net/2013/05/11/genericizing-the-unit-of-work-pattern-repository-pattern-with-entity-framework-in-mvc/) and at [codeplex site](http://genericunitofworkandrepositories.codeplex.com/releases/view/113204).
 
 * RequireJS
 This javascript AMD allow as to modularize our javascript layer.
-It will also provide us the ability to lazy loading angular js controllers following the concept of Ifeanyi Isitor.
-Please, don't save time and go straigh to his blog's page to read more about this topic:
-http://ify.io/lazy-loading-in-angularjs/
+It will also provide us the ability to lazy loading angular js controllers following the concept of **Ifeanyi Isitor**.
+Please, don't save time and go straigh to his [blog's page](http://ify.io/lazy-loading-in-angularjs/) to read more about this topic.
 
-* Twitter bootstrap
-* Angular UI bootstrap and NgGrid:
-http://angular-ui.github.io/
-* ASP.NET MVC 5:
-http://www.asp.net/vnext/overview/aspnet-mvc
+* [Twitter bootstrap](http://getbootstrap.com/2.3.2/)
+* [Angular UI bootstrap and NgGrid](http://angular-ui.github.io/)
+* [ASP.NET MVC 5](http://www.asp.net/vnext/overview/aspnet-mvc)
 * Web API via nuget
-* xUnit:
-http://xunit.codeplex.com/
-* Entity framework 6:
-https://entityframework.codeplex.com/wikipage?title=specs
+* [xUnit](http://xunit.codeplex.com/)
+* [Entity framework 6](https://entityframework.codeplex.com/wikipage?title=specs)
+* [Karma](http://karma-runner.github.io/0.10/index.html), to realize tdd and e2e tests for the js layer:
+  (will require nodejs installed) 
+* [Karma-html-reporter](https://www.npmjs.org/package/karma-html-reporter), to produce html files as output for the tests results.
 
 # <a name="overview"></a>Main overview:
 Nowadays, ASP.NET MVC X and Wep API provides a well known platform for building enterprise web applications. 
