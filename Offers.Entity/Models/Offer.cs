@@ -19,7 +19,7 @@ namespace Offers.Entities
         public virtual Customer Customer { get; set; }
         public virtual Manager Manager { get; set; }
         public virtual OfferReason OfferReason { get; set; }
-        public virtual OfferStatu OfferStatu { get; set; }
+        public virtual OfferStatus OfferStatus { get; set; }
         public virtual OfferType OfferType { get; set; }
     }
 }

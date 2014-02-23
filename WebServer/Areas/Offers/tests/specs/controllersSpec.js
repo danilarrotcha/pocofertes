@@ -1,4 +1,4 @@
-﻿define(['app/app', 'app/controllers/helloWorldController'], function (app, helloWorldController)
+﻿define(['app/app', 'app/controllers/offersGridController'], function (app, helloWorldController)
 {
     describe('Check that my app module is being returned and loaded', function () {
         var offersApp = app;
@@ -8,7 +8,7 @@
         });
     });
     
-    describe('helloWolrdController should:', function () {
+    describe('offersGridController should:', function () {
 
         var scope,
             mocking = angular.mock;
@@ -20,7 +20,7 @@
             //create an empty scope
             scope = $rootScope.$new();
             //declare the controller and inject our empty scope
-            $controller('helloWorldController', {$scope: scope});
+            $controller('offersGridController', { $scope: scope });
         }));
 
         it('return the proper greet', function () {

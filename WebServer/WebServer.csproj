@@ -424,6 +424,8 @@
     <Content Include="Areas\Offers\libs\i18n\angular-locale_zh.js" />
     <Content Include="Areas\Offers\libs\i18n\angular-locale_zu-za.js" />
     <Content Include="Areas\Offers\libs\i18n\angular-locale_zu.js" />
+    <Content Include="Areas\Offers\libs\ng-grid.js" />
+    <Content Include="Areas\Offers\Content\ng-grid.min.css" />
     <Content Include="Areas\Offers\libs\ui-bootstrap-0.10.0.js" />
     <Content Include="Areas\Offers\libs\ui-bootstrap-0.10.0.min.js" />
     <Content Include="Areas\Offers\libs\ui-bootstrap-tpls-0.10.0.js" />
@@ -431,7 +433,7 @@
     <Content Include="Areas\Offers\libs\jquery.js" />
     <Content Include="Areas\Offers\libs\jquery.validate.js" />
     <Content Include="Areas\Offers\libs\jquery.validate.unobtrusive.js" />
-    <Content Include="Areas\Offers\Scripts\controllers\helloWorldController.js" />
+    <Content Include="Areas\Offers\Scripts\controllers\offersGridController.js" />
     <Content Include="Areas\Offers\Scripts\services\dependencyResolver.js" />
     <Content Include="Areas\Offers\tests\jasmine_template.html" />
     <Content Include="Areas\Offers\tests\specs\controllersSpec.js" />

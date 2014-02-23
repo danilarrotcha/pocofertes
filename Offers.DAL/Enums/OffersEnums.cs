@@ -13,7 +13,7 @@
     /// <summary>
     /// Available offer statuses supported by the POC
     /// </summary>
-    public enum OfferStatus
+    public enum OfferStatusType
     {
         PendingToValidate = 0,
         Validated = 1,

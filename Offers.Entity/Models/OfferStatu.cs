@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace Offers.Entities
 {
-    public partial class OfferStatu : Repository.EntityBase
+    public partial class OfferStatus : Repository.EntityBase
     {
-        public OfferStatu()
+        public OfferStatus()
         {
             this.Offers = new List<Offer>();
         }

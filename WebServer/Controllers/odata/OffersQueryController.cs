@@ -171,9 +171,9 @@ namespace WebServer.Controllers
 
         // GET odata/OffersQuery(5)/OfferStatu
         [Queryable]
-        public SingleResult<OfferStatu> GetOfferStatu([FromODataUri] int key)
+        public SingleResult<OfferStatus> GetOfferStatu([FromODataUri] int key)
         {
-            return SingleResult.Create(_offersRepository.Query().Get().Where(m => m.OfferID == key).Select(m => m.OfferStatu));
+            return SingleResult.Create(_offersRepository.Query().Get().Where(m => m.OfferID == key).Select(m => m.OfferStatus));
         }
 
         // GET odata/OffersQuery(5)/OfferType

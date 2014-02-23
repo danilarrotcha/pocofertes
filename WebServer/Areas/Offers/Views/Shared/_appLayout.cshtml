@@ -7,6 +7,8 @@
 
 @section customeStyles
 {
+
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Areas/Offers/Content/ng-grid.min.css")" />
     <link rel="stylesheet" type="text/css" href="@Url.Content("~/Areas/Offers/Content/offers.css")" />
 }
 
@@ -62,10 +64,10 @@
                                         templateUrl: '@Url.Action("Index", "App", new {Area = "Offers"})'
                                     })
                                 .when(
-                                    '/helloWorld',
+                                    '/offersgrid',
                                     {
                                         templateUrl: '@Url.Action("HelloWorld", "App")',
-                                        resolve: dependencyResolver(['app/controllers/helloWorldController'])
+                                        resolve: dependencyResolver(['app/controllers/offersGridController'])
                                     });
                         }
                     ]);

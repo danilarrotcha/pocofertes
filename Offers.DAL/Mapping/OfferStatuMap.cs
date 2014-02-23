@@ -4,9 +4,9 @@ using Offers.Entities;
 
 namespace Offers.DAL.Mapping
 {
-    public class OfferStatuMap : EntityTypeConfiguration<OfferStatu>
+    public class OfferStatusMap : EntityTypeConfiguration<OfferStatus>
     {
-        public OfferStatuMap()
+        public OfferStatusMap()
         {
             // Primary Key
             this.HasKey(t => t.OfferStatusID);

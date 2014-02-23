@@ -3,4 +3,19 @@
 }
 <div ng-controller="helloWorldController">
     <h1>{{greet}}</h1>
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="offersGridStyle span10" ng-grid="offersGrid"></div>
+            <div class="span2">
+                <ul class="unstyled" ng-repeat="offer in mySelections">
+                    <li>{{offer.customer}}</li>
+                    <li>{{offer.offerType}}</li>
+                    <li>{{offer.createdOn}}</li>
+                    <li>{{offer.offerStatus}}</li>
+                    <li>{{offer.successAmount}}</li>
+                    <li>{{offer.priceAmount}}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>

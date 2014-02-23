@@ -25,7 +25,7 @@ namespace Offers.DAL
         public DbSet<Offer> Offers { get; set; }
         public DbSet<OfferNote> OfferNotes { get; set; }
         public DbSet<OfferReason> OfferReasons { get; set; }
-        public DbSet<OfferStatu> OfferStatus { get; set; }
+        public DbSet<OfferStatus> OfferStatus { get; set; }
         public DbSet<OfferType> OfferTypes { get; set; }
         public DbSet<spt_fallback_db> spt_fallback_db { get; set; }
         public DbSet<spt_fallback_dev> spt_fallback_dev { get; set; }
@@ -41,7 +41,7 @@ namespace Offers.DAL
             modelBuilder.Configurations.Add(new OfferMap());
             modelBuilder.Configurations.Add(new OfferNoteMap());
             modelBuilder.Configurations.Add(new OfferReasonMap());
-            modelBuilder.Configurations.Add(new OfferStatuMap());
+            modelBuilder.Configurations.Add(new OfferStatusMap());
             modelBuilder.Configurations.Add(new OfferTypeMap());
             modelBuilder.Configurations.Add(new spt_fallback_dbMap());
             modelBuilder.Configurations.Add(new spt_fallback_devMap());

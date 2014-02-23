@@ -15,6 +15,9 @@ namespace WebServer
             // Web API routes
             config.MapHttpAttributeRoutes();
 
+            config.Formatters.JsonFormatter.SerializerSettings.ReferenceLoopHandling
+= Newtonsoft.Json.ReferenceLoopHandling.Ignore; 
+
             config.Formatters.XmlFormatter.UseXmlSerializer = true;
 
             config.Routes.MapHttpRoute(

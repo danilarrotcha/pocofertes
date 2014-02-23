@@ -1,5 +1,7 @@
 ﻿
 
+using Offers.Entity;
+
 namespace WebServer.Controllers
 {
     using Offers.Entities;
@@ -23,11 +25,34 @@ namespace WebServer.Controllers
         }
 
         // GET api/Offers
-        public IQueryable<Offer> GetOffers()
+        public async Task<IHttpActionResult> GetOffers()
         {
-            return _offersRepository
+            var offers = await _offersRepository
                 .Query()
-                .Get();
+                .Include(o => o.OfferType)
+                .Include(o => o.OfferStatus)
+                .Include(o => o.Customer)
+                .GetAsync();
+            
+            var enumerable = offers as Offer[] ?? offers.ToArray();
+            
+            if (enumerable.Any())
+            {
+                var resp = enumerable
+                    .Select(o => new
+                    {
+                        customer = o.Customer.GetFullName(),
+                        createdOn = o.CreatedOn,
+                        offerType = o.OfferType.Description,
+                        followedOn = o.FollowedOn,
+                        offerStatus = o.OfferStatus.Description,
+                        successAmount = o.SuccessAmount + " %",
+                        priceAmount = o.PriceAmount
+                    });
+                return Ok(resp);
+            }
+
+            return NotFound();
         }
 
         // GET api/Offers/5

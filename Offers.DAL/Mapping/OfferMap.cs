@@ -36,7 +36,7 @@ namespace Offers.DAL.Mapping
             this.HasRequired(t => t.OfferReason)
                 .WithMany(t => t.Offers)
                 .HasForeignKey(d => d.ReasonID);
-            this.HasRequired(t => t.OfferStatu)
+            this.HasRequired(t => t.OfferStatus)
                 .WithMany(t => t.Offers)
                 .HasForeignKey(d => d.OfferStatusID);
             this.HasRequired(t => t.OfferType)
