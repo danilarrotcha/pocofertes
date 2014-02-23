@@ -1,10 +1,10 @@
 ﻿define(['app/app'],
     function(app) {
-        app.controller('helloWorldController', [
+        app.controller('offersGridController', [
             '$scope',
             '$resource',
-            //'ngGrid',
             function ($scope, $resource) {
+                debugger;
                 $scope.greet = "Welcome to the offers grid";
                 var Offers = $resource('http://localhost:52282/api/Offers');
                 $scope.offersData = [];

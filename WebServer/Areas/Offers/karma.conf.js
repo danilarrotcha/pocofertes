@@ -20,6 +20,8 @@ module.exports = function(config) {
         { pattern: 'libs/angular-route.js', included: false },
         { pattern: 'libs/angular-resource.js', included: false },
         { pattern: 'libs/angular-mocks.js', included: true },
+        { pattern: 'libs/jquery.js', included: true },
+        { pattern: 'libs/ng-grid.js', included: true },
       //{ pattern: 'tests/*.js', included: false },
       //{pattern: 'tests/e2e/*.js', included: false},
       { pattern: 'tests/specs/*Spec.js', included: false },

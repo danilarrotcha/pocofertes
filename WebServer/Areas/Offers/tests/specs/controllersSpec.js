@@ -1,5 +1,6 @@
-﻿define(['app/app', 'app/controllers/offersGridController'], function (app, helloWorldController)
+﻿define(['app/app', 'app/controllers/offersGridController'], function (app, offersGridController)
 {
+    // todo: mirar http://www.tuesdaydeveloper.com/2013/06/angularjs-testing-with-karma-and-jasmine/
     describe('Check that my app module is being returned and loaded', function () {
         var offersApp = app;
 
@@ -8,23 +9,34 @@
         });
     });
     
-    describe('offersGridController should:', function () {
-
-        var scope,
-            mocking = angular.mock;
+    describe('offersGridController', function(){
+        var scope, $httpBackend;
  
         //mock Application to allow us to inject our own dependencies
-        beforeEach(mocking.module('offersApp'));
+        beforeEach(angular.mock.module('offersApp'));
+
         //mock the controller for the same reason and include $rootScope and $controller
-        beforeEach(mocking.inject(function ($rootScope, $controller) {
+        beforeEach(angular.mock.inject(function($rootScope, $controller, _$httpBackend_){
+            $httpBackend = _$httpBackend_;
+            $httpBackend
+                .when('GET', 'http://localhost:52282/api/Offers')
+                .respond([
+                    { customer: 'Bob' },
+                    { customer: 'Jane' }]);
+ 
             //create an empty scope
             scope = $rootScope.$new();
             //declare the controller and inject our empty scope
             $controller('offersGridController', { $scope: scope });
         }));
-
-        it('return the proper greet', function () {
-            expect(scope.greet).toEqual('Hello world!');
+        // tests start here
+        it('should have variable text = "Welcome to the offers grid"', function () {
+            expect(scope.greet).toBe('Welcome to the offers grid');
+        });
+        it('should fetch list of offers', function(){
+            $httpBackend.flush();
+            expect(scope.offersData.length).toBe(2);
+            expect(scope.offersData[0].customer).toBe('Bob');
         });
     });
 });
