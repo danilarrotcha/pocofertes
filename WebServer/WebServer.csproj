@@ -434,6 +434,7 @@
     <Content Include="Areas\Offers\libs\jquery.validate.js" />
     <Content Include="Areas\Offers\libs\jquery.validate.unobtrusive.js" />
     <Content Include="Areas\Offers\Scripts\controllers\offersGridController.js" />
+    <Content Include="Areas\Offers\Scripts\controllers\offersOverviewController.js" />
     <Content Include="Areas\Offers\Scripts\services\dependencyResolver.js" />
     <Content Include="Areas\Offers\tests\jasmine_template.html" />
     <Content Include="Areas\Offers\tests\specs\controllersSpec.js" />
@@ -450,6 +451,7 @@
     <Content Include="Areas\Offers\libs\domReady.js" />
     <Content Include="Areas\Offers\Views\App\Index.cshtml" />
     <Content Include="Areas\Offers\Views\App\HelloWorld.cshtml" />
+    <Content Include="Areas\Offers\Views\App\OffersManagement.cshtml" />
     <None Include="Scripts\jquery\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery\jquery.js" />
     <Content Include="Scripts\jquery\jquery-1.10.2.min.js" />

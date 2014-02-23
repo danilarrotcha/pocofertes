@@ -1,0 +1,82 @@
+﻿@{
+    Layout = null;
+}
+<div ng-controller="offersGridController">
+    <h3>{{greet}}</h3>
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="offersGridStyle span8" ng-grid="offersGrid"></div>
+            <div class="span4" ng-controller="offersOverviewController" ng-show="offersData.length > 0">
+                <div><h3>Offers panel</h3></div>
+                <div class="row-fluid">
+                    <div class="span2" style="color: #FFFFFF; background-color: #008000; border-radius: 2px; padding: 2px; height: 65px;">
+                        <div style="font-size: x-small;">Accepted</div>
+                        <div class="text-right" style="font-size: large; bottom: 0; right: 2px;">{{acceptedOffers}}</div>
+                    </div>
+                    <div class="span2" style="color: #FFFFFF; background-color: #d2691e; border-radius: 2px; padding: 2px; height: 65px; ">
+                        <div style="font-size: x-small;">Pending accept</div>
+                        <div class="text-right" style="font-size: large;">{{pendingToAccept}}</div>
+                    </div>
+                    <div class="span2" style="color: #FFFFFF; background-color: #ff0000; border-radius: 2px; padding: 2px; height: 65px; ">
+                        <div style="font-size: x-small;">Refused</div>
+                        <div class="text-right" style="font-size: large;">{{refused}}</div>
+                    </div>
+                    <div class="span2" style="color: #FFFFFF; background-color: #ffa500; border-radius: 2px; padding: 2px; height: 65px; ">
+                        <div style="font-size: x-small;">Pending validate</div>
+                        <div class="text-right" style="font-size: large;">{{pendingToValidate}}</div>
+                    </div>
+                    <div class="span2" style="color: #FFFFFF; background-color: #1e90ff; border-radius: 2px; padding: 2px; height: 65px; ">
+                        <div style="font-size: x-small;">Validated</div>
+                        <div class="text-right" style="font-size: large;">{{validated}}</div>
+                    </div>
+                </div>
+                <div>
+                    <h4>Total offers are: {{totalOffers}}</h4>
+                </div>
+                <div>
+                    <h6 style="color: #d2691e">Balances</h6>
+                </div>
+                <div class="row-fluid">
+                    <div class="span4">Total offered:</div>
+                    <div class="span4"><strong>{{totalAmount | currency}}</strong></div>
+                </div>
+                <div class="row-fluid">
+                    <div class="span4">Total validated:</div>
+                    <div class="span4"><strong>{{validatedAmount | currency}}</strong></div>
+                    <div class="span4"><strong>% {{validatedPc}}</strong></div>
+                </div>
+                <div class="row-fluid">
+                    <div class="span4">Total accepted:</div>
+                    <div class="span4"><strong>{{acceptedOffersAmount | currency}}</strong></div>
+                    <div class="span4"><strong>% {{acceptedOffersPc}}</strong></div>
+                </div>
+                <div class="row-fluid">
+                    <div class="span4">Total refused:</div>
+                    <div class="span4"><strong>{{refusedAmount | currency}}</strong></div>
+                    <div class="span4"><strong>% {{refusedPc}}</strong></div>
+                </div>
+                <div class="row-fluid">
+                    <div class="span4">Total pending:</div>
+                    <div class="span4"><strong>{{pendingToAcceptAmount + pendingToValidateAmount | currency}}</strong></div>
+                    <div class="span4"><strong>% {{pendingToAcceptPc + pendingToValidatePc }}</strong></div>
+                </div>
+                <hr/>
+                <div ng-show="mySelections.length === 1">
+                    <div class="row-fluid">
+                        <div class="span5">Offer created on:</div>
+                        <div class="span5"><span style="font-size: small;"><strong>{{mySelections[0].createdOn | date:'MMM dd, yyyy'}}</strong></span></div>
+                    </div>
+                    <div class="row-fluid">
+                        <div class="span5">Contact:</div>
+                        <div class="span4"><span style="font-size: small;"><strong>{{mySelections[0].customer}}</strong></span></div>
+                        <div class="span1" ng-show="mySelections[0].customerIsClient"><span style="font-size: small; color:#008000"><strong>Client</strong></span></div>
+                    </div>
+                    <div class="row-fluid">
+                        <div class="span5">Managed by:</div>
+                        <div class="span5"><span style="font-size: small;"><strong>{{mySelections[0].manager}}</strong></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

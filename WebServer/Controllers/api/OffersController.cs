@@ -32,6 +32,7 @@ namespace WebServer.Controllers
                 .Include(o => o.OfferType)
                 .Include(o => o.OfferStatus)
                 .Include(o => o.Customer)
+                .Include(o => o.Manager)
                 .GetAsync();
             
             var enumerable = offers as Offer[] ?? offers.ToArray();
@@ -42,12 +43,16 @@ namespace WebServer.Controllers
                     .Select(o => new
                     {
                         customer = o.Customer.GetFullName(),
+                        customerIsClient = o.Customer.IsClient,
                         createdOn = o.CreatedOn,
                         offerType = o.OfferType.Description,
                         followedOn = o.FollowedOn,
                         offerStatus = o.OfferStatus.Description,
+                        offerStatusId = o.OfferStatusID,
+                        offerTypeId = o.OfferTypeID,
                         successAmount = o.SuccessAmount + " %",
-                        priceAmount = o.PriceAmount
+                        priceAmount = o.PriceAmount,
+                        manager = o.Manager.GetFullName()
                     });
                 return Ok(resp);
             }

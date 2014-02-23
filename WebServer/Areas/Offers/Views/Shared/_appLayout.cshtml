@@ -57,10 +57,10 @@
                                         templateUrl: '@Url.Action("Index", "App", new {Area = "Offers"})'
                                     })
                                 .when(
-                                    '/offersgrid',
+                                    '/offersManagement',
                                     {
-                                        templateUrl: '@Url.Action("HelloWorld", "App")',
-                                        resolve: dependencyResolver(['app/controllers/offersGridController'])
+                                        templateUrl: '@Url.Action("OffersManagement", "App")',
+                                        resolve: dependencyResolver(['app/controllers/offersGridController', 'app/controllers/offersOverviewController'])
                                     });
                         }
                     ]);

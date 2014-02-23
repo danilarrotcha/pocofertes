@@ -4,15 +4,17 @@
             '$scope',
             '$resource',
             function ($scope, $resource) {
-                debugger;
-                $scope.greet = "Welcome to the offers grid";
+                
                 var Offers = $resource('http://localhost:52282/api/Offers');
+                
+                $scope.greet = "Welcome to the offers grid";
+                $scope.filteringText = '';
                 $scope.offersData = [];
                 $scope.mySelections = [];
                 $scope.offersGrid =
                        {
                            data: 'offersData',
-                           multiSelect: true,
+                           multiSelect: false,
                            selectedItems: $scope.mySelections,
                            columnDefs: [
                                { field: 'customer', displayName: 'Customer' },

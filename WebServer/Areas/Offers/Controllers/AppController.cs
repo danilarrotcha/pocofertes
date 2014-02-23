@@ -24,5 +24,10 @@ namespace WebServer.Areas.Offers.Controllers
         {
             return View();
         }
+
+        public ActionResult OffersManagement()
+        {
+            return View();
+        }
 	}
 }
