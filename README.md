@@ -59,7 +59,8 @@ This poc's main objective is to try to use the following features:
 
 # <a name="instructions"></a>Instructions:
 * Download NodeJS, http://nodejs.org/
-* install KARMA via NPM from node console: npm install -g karma
+* Install KARMA via NPM from node console: **npm install -g karma**
+* Install KARMA-HTML-REPORTER via NPM from node console: **npm install karma-html-reporter --global**
 * Download the source code for this POC.
 * Seed the database, with the help of the **Offers.Data.Initializer** project in this source. Make sure you set the proper connection string at the **app.config** file found in the same project.
    Run the test **'OffersDbInitializer'**.
